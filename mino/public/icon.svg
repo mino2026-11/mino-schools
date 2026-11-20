@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="64" fill="#0F172A"/>
+  <!-- Safe zone inner border -->
+  <rect x="40" y="40" width="432" height="432" rx="48" fill="none" stroke="#E2E8F0" stroke-opacity="0.15" stroke-width="2"/>
+  <!-- Central Shield / Academic Crest -->
+  <path d="M256 100 L380 150 V270 C380 345 325 410 256 430 C187 410 132 345 132 270 V150 Z" fill="#1E293B" stroke="#B45309" stroke-width="12" stroke-linejoin="round"/>
+  <!-- Open Book / Ledger emblem -->
+  <path d="M190 280 C220 270 245 285 256 295 C267 285 292 270 322 280 V210 C292 200 267 215 256 225 C245 215 220 200 190 210 Z" fill="#FFFFFF"/>
+  <path d="M256 225 V295" stroke="#0F172A" stroke-width="4" stroke-linecap="round"/>
+  <!-- Emerald Verification Star / Checkmark -->
+  <circle cx="256" cy="165" r="22" fill="#065F46" stroke="#FFFFFF" stroke-width="4"/>
+  <path d="M248 165 L254 171 L266 159" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Modern Geometric Text / Mark -->
+  <text x="256" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="800" fill="#E2E8F0" text-anchor="middle" letter-spacing="4">MINO</text>
+  <text x="256" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#B45309" text-anchor="middle" letter-spacing="6">SMS</text>
+</svg>

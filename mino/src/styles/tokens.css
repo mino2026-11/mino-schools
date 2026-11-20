@@ -1,0 +1,118 @@
+/**
+ * MINO-SMS Design Tokens
+ * Strict 3-Colour Core Palette & Utilitarian Anti-AI Aesthetic
+ */
+
+:root {
+  /* 3 Core Colours */
+  --mino-primary: #0F172A;        /* Deep Slate / Obsidian - Authority */
+  --mino-primary-light: #1E293B;  /* Slate 800 */
+  --mino-primary-hover: #020617;  /* Slate 950 */
+  
+  --mino-accent: #B45309;         /* Amber Ochre - Call to Action, Pending, Alerts */
+  --mino-accent-light: #FEF3C7;   /* Amber 100 - Subtle highlights */
+  --mino-accent-hover: #92400E;   /* Amber 800 */
+
+  --mino-verified: #065F46;       /* Forest Emerald - Paid, Passed, Synced */
+  --mino-verified-light: #D1FAE5; /* Emerald 100 - Subtle confirmations */
+  --mino-verified-hover: #064E3B; /* Emerald 900 */
+
+  /* Neutral Structural Foundation */
+  --mino-bg: #FFFFFF;
+  --mino-surface: #F8FAFC;       /* Subtle row / section divider */
+  --mino-surface-subtle: #F1F5F9;
+  --mino-border: #E2E8F0;
+  --mino-border-strong: #CBD5E1;
+  --mino-text-main: #0F172A;
+  --mino-text-muted: #64748B;
+  --mino-text-inverse: #FFFFFF;
+
+  /* Alert / Error Neutral */
+  --mino-danger: #991B1B;         /* Crimson Ochre */
+  --mino-danger-light: #FEE2E2;
+
+  /* Strict Radii - No pills */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+
+  /* Shadows - Minimal, strict, utilitarian */
+  --shadow-subtle: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --shadow-popover: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+
+  /* Mobile Ergonomics */
+  --min-touch-target: 48px;
+  --touch-gap: 8px;
+  --font-tabular: tabular-nums;
+}
+
+/* Tabular numbers for financial and grading precision */
+.font-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Mobile Thumb Zone Sticky Bar */
+.thumb-action-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background-color: var(--mino-bg);
+  border-top: 1px solid var(--mino-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 16px;
+  z-index: 40;
+}
+
+/* High density table styles */
+.mino-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.mino-table th {
+  background-color: var(--mino-surface);
+  color: var(--mino-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 11px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--mino-border);
+  text-align: left;
+}
+
+.mino-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--mino-border);
+  color: var(--mino-text-main);
+}
+
+.mino-table tbody tr:hover {
+  background-color: #F8FAFC;
+}
+
+.mino-table tbody tr.is-selected {
+  background-color: #FEF3C7;
+}
+
+/* Print Friendly Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  html,
+  body,
+  #root {
+    height: auto !important;
+    overflow: visible !important;
+    background: #FFF !important;
+    color: #000 !important;
+  }
+}

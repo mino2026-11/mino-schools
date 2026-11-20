@@ -1,0 +1,8 @@
+{
+  "name": "MINO - School Management System as a Service",
+  "description": "A gentle, reliable school management platform where teachers thrive, students grow, and families stay connected—working seamlessly even without internet.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

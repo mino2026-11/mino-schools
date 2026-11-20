@@ -1,0 +1,119 @@
+{
+  "entities": {
+    "SchoolTenant": {
+      "title": "SchoolTenant",
+      "description": "Tenant entity containing school organization details, session info, and currency configuration.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "name": { "type": "string", "maxLength": 128 },
+        "code": { "type": "string", "maxLength": 16 },
+        "currency": { "type": "string", "maxLength": 8 },
+        "currentSession": { "type": "string", "maxLength": 32 },
+        "currentTerm": { "type": "string", "enum": ["first_term", "second_term", "third_term"] },
+        "createdAt": { "type": "string" },
+        "isReportsLocked": { "type": "boolean" }
+      },
+      "required": ["id", "name", "code", "currency", "currentSession", "currentTerm"]
+    },
+    "Student": {
+      "title": "Student",
+      "description": "Enrolled pupil in the school with academic and guardian links.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "admissionNo": { "type": "string", "maxLength": 32 },
+        "firstName": { "type": "string", "maxLength": 64 },
+        "lastName": { "type": "string", "maxLength": 64 },
+        "gender": { "type": "string", "enum": ["male", "female", "other"] },
+        "classArm": { "type": "string", "maxLength": 32 },
+        "guardianName": { "type": "string", "maxLength": 128 },
+        "guardianPhone": { "type": "string", "maxLength": 32 },
+        "guardianEmail": { "type": "string", "maxLength": 128 },
+        "accessToken": { "type": "string", "maxLength": 64 },
+        "isDeleted": { "type": "boolean" },
+        "status": { "type": "string", "enum": ["active", "suspended", "graduated", "withdrawn"] },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "admissionNo", "firstName", "lastName", "classArm"]
+    },
+    "ScoreEvent": {
+      "title": "ScoreEvent",
+      "description": "Append-only immutable score event submitted by a teacher or through syncPush.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "clientChangeId": { "type": "string", "maxLength": 64 },
+        "studentId": { "type": "string", "maxLength": 64 },
+        "subjectId": { "type": "string", "maxLength": 64 },
+        "session": { "type": "string", "maxLength": 32 },
+        "term": { "type": "string", "maxLength": 32 },
+        "ca1": { "type": "number" },
+        "ca2": { "type": "number" },
+        "midterm": { "type": "number" },
+        "exam": { "type": "number" },
+        "recordedBy": { "type": "string", "maxLength": 64 },
+        "deviceId": { "type": "string", "maxLength": 64 },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "clientChangeId", "studentId", "subjectId", "session", "term"]
+    },
+    "LedgerEntry": {
+      "title": "LedgerEntry",
+      "description": "Append-only financial ledger record with integer minor monetary units (cents/kobo).",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "clientChangeId": { "type": "string", "maxLength": 64 },
+        "studentId": { "type": "string", "maxLength": 64 },
+        "type": { "type": "string", "enum": ["DEBIT_FEE", "CREDIT_PAYMENT", "WAIVER"] },
+        "amountMinor": { "type": "integer" },
+        "description": { "type": "string", "maxLength": 256 },
+        "receiptNo": { "type": "string", "maxLength": 64 },
+        "paymentChannel": { "type": "string", "enum": ["CASH", "BANK_TRANSFER", "POS", "ONLINE"] },
+        "verificationHash": { "type": "string", "maxLength": 128 },
+        "recordedBy": { "type": "string", "maxLength": 64 },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "studentId", "type", "amountMinor", "timestamp"]
+    },
+    "AuditLog": {
+      "title": "AuditLog",
+      "description": "Immutable audit trail event for administrative compliance.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "actorId": { "type": "string", "maxLength": 64 },
+        "actorRole": { "type": "string", "maxLength": 32 },
+        "action": { "type": "string", "maxLength": 64 },
+        "entity": { "type": "string", "maxLength": 64 },
+        "entityId": { "type": "string", "maxLength": 64 },
+        "details": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "actorId", "action", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/schools/{schoolId}": {
+      "schema": { "$ref": "SchoolTenant" },
+      "description": "Root document for a school tenant organization."
+    },
+    "/schools/{schoolId}/students/{studentId}": {
+      "schema": { "$ref": "Student" },
+      "description": "Collection of enrolled students in this school."
+    },
+    "/schools/{schoolId}/scoreEvents/{scoreEventId}": {
+      "schema": { "$ref": "ScoreEvent" },
+      "description": "Append-only immutable grading score entries."
+    },
+    "/schools/{schoolId}/ledgerEntries/{ledgerEntryId}": {
+      "schema": { "$ref": "LedgerEntry" },
+      "description": "Append-only integer-based financial transactions."
+    },
+    "/schools/{schoolId}/auditLogs/{logId}": {
+      "schema": { "$ref": "AuditLog" },
+      "description": "Append-only operational audit trail."
+    }
+  }
+}

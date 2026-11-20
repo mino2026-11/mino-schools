@@ -1,0 +1,27 @@
+{
+  "id": "/",
+  "name": "MINO School Management System",
+  "short_name": "MINO-SMS",
+  "description": "Multi-tenant, offline-first school management system with encrypted local vault, ergonomic gradebook, and fee ledger.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0F172A",
+  "theme_color": "#0F172A",
+  "categories": ["education", "productivity", "finance"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

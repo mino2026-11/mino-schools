@@ -1,0 +1,236 @@
+{
+  "version": 1,
+  "syncVersion": 24,
+  "settings": {
+    "url": "https://cloud.activepieces.com/api/v1/webhooks/XV7ZjjsRNy2BNosAm1HjH",
+    "fallbackToTestUrl": true,
+    "assistantName": "Glass Activepieces AI",
+    "systemPrompt": "You are a helpful, knowledgeable, and articulate AI assistant.",
+    "lastTestedAt": "2026-09-18T23:24:12.770Z",
+    "lastStatus": 200
+  },
+  "conversations": [
+    {
+      "id": "conv-1789773851762-a47z8",
+      "title": "Give me a brief 2-bullet tip on pro...",
+      "createdAt": "2026-09-18T23:24:11.762Z",
+      "updatedAt": "2026-09-18T23:24:18.658Z",
+      "isArchived": false,
+      "pinned": false,
+      "tags": [
+        "chat"
+      ],
+      "messageCount": 2,
+      "lastMessage": "Here are two effective tips for boosting productivity:\n\n*   **Eat the Frog:** Tackle your most diffi"
+    },
+    {
+      "id": "conv-1789773782443-k86dq",
+      "title": "hi",
+      "createdAt": "2026-09-18T23:23:02.443Z",
+      "updatedAt": "2026-09-18T23:23:10.927Z",
+      "isArchived": false,
+      "pinned": false,
+      "tags": [
+        "chat"
+      ],
+      "messageCount": 4,
+      "lastMessage": "I am a versatile AI assistant designed to help with a wide variety of tasks. Here is a breakdown of "
+    },
+    {
+      "id": "conv-1789771440550-iylh7",
+      "title": "Hello assistant! Test ping",
+      "createdAt": "2026-09-18T22:44:00.550Z",
+      "updatedAt": "2026-09-18T22:44:06.822Z",
+      "isArchived": false,
+      "pinned": false,
+      "tags": [
+        "chat"
+      ],
+      "messageCount": 2,
+      "lastMessage": "Hello! How can I assist you with your project today?"
+    },
+    {
+      "id": "welcome-session",
+      "title": "Welcome to Glass AI Assistant",
+      "createdAt": "2026-09-18T22:43:55.623Z",
+      "updatedAt": "2026-09-18T23:20:17.011Z",
+      "isArchived": false,
+      "pinned": true,
+      "tags": [
+        "guide",
+        "activepieces"
+      ],
+      "summary": "Introduction to your Activepieces webhook AI and real-time frosted glass workspace.",
+      "messageCount": 6,
+      "lastMessage": "Hello! I am your AI assistant, connected and ready to chat. What would you like to explore or work on?"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg-welcome-user",
+      "conversationId": "welcome-session",
+      "role": "user",
+      "content": "Hello! Is this connected to my Activepieces webhook?",
+      "timestamp": "2026-09-18T22:43:25.625Z",
+      "status": "delivered"
+    },
+    {
+      "id": "msg-welcome-assistant",
+      "conversationId": "welcome-session",
+      "role": "assistant",
+      "content": "### Welcome to your Glass AI Assistant! \n\nI'm directly configured with your **Activepieces webhook**:\n`https://cloud.activepieces.com/api/v1/webhooks/XV7ZjjsRNy2BNosAm1HjH`\n\nHere's what you can do right now:\n- **Instant Chat & Webhook Dispatch**: Send any query; payloads are dispatched to your Activepieces automation flow with smart fallback detection.\n- **Local Database Persistence**: Every message and conversation thread is stored locally and synchronized in real-time across all your tabs and devices.\n- **Archive Logs Dashboard**: Easily manage, search, inspect webhook latencies, and export archived chat logs.\n- **iOS 26 Frosted Glass Design**: Enjoy transparent fluid glass cards, soft glow transitions, and full dark/light mode toggles.\n\nType a message below to test your webhook flow!",
+      "timestamp": "2026-09-18T22:43:55.623Z",
+      "status": "delivered",
+      "webhookMeta": {
+        "latencyMs": 120,
+        "statusCode": 200,
+        "urlCalled": "https://cloud.activepieces.com/api/v1/webhooks/XV7ZjjsRNy2BNosAm1HjH",
+        "source": "system"
+      }
+    },
+    {
+      "id": "msg-1789771440551-96o9f",
+      "timestamp": "2026-09-18T22:44:00.551Z",
+      "conversationId": "conv-1789771440550-iylh7",
+      "role": "user",
+      "content": "Hello assistant! Test ping",
+      "status": "delivered"
+    },
+    {
+      "id": "msg-1789771441711-s1ma6",
+      "timestamp": "2026-09-18T22:44:01.711Z",
+      "conversationId": "conv-1789771440550-iylh7",
+      "role": "assistant",
+      "content": "✅ **Activepieces Webhook Triggered Successfully!**\n\nYour message was dispatched to your Activepieces flow at `https://cloud.activepieces.com/api/v1/webhooks/XV7ZjjsRNy2BNosAm1HjH/test` and returned **HTTP 200 OK** (Latency: 892ms).\n\n> **Activepieces Flow Status**: The flow accepted the webhook payload. If your flow uses an asynchronous action or needs to return a custom chat answer, add a **\"Return HTTP Response\"** piece at the end of your Activepieces flow with the response body mapped to your AI output.",
+      "status": "delivered",
+      "webhookMeta": {
+        "latencyMs": 892,
+        "statusCode": 200,
+        "urlCalled": "https://cloud.activepieces.com/api/v1/webhooks/XV7ZjjsRNy2BNosAm1HjH/test",
+        "isTestMode": true,
+        "rawResponse": {},
+        "source": "activepieces"
+      }
+    },
+    {
+      "id": "msg-1789771525555-o9eev",
+      "timestamp": "2026-09-18T22:45:25.555Z",
+      "conversationId": "welcome-session",
+      "role": "user",
+      "content": "hi",
+      "status": "delivered"
+    },
+    {
+      "id": "msg-1789771526701-70fi7",
+      "timestamp": "2026-09-18T22:45:26.701Z",
+      "conversationId": "welcome-session",
+      "role": "assistant",
+      "content": "Hello! How can I assist you with your project today?",
+      "status": "delivered",
+      "webhookMeta": {
+        "latencyMs": 805,
+        "statusCode": 200,
+        "urlCalled": "https://cloud.activepieces.com/api/v1/webhooks/XV7ZjjsRNy2BNosAm1HjH/test",
+        "isTestMode": true,
+        "rawResponse": {},
+        "source": "gemini-hybrid"
+      }
+    },
+    {
+      "id": "msg-1789773616125-ydodt",
+      "timestamp": "2026-09-18T23:20:16.125Z",
+      "conversationId": "welcome-session",
+      "role": "user",
+      "content": "hi",
+      "status": "delivered"
+    },
+    {
+      "id": "msg-1789773617011-rhjmn",
+      "timestamp": "2026-09-18T23:20:17.011Z",
+      "conversationId": "welcome-session",
+      "role": "assistant",
+      "content": "Hello! I am your AI assistant, connected and ready to chat. What would you like to explore or work on?",
+      "status": "delivered",
+      "webhookMeta": {
+        "latencyMs": 689,
+        "statusCode": 200,
+        "urlCalled": "https://cloud.activepieces.com/api/v1/webhooks/XV7ZjjsRNy2BNosAm1HjH/test",
+        "isTestMode": true,
+        "rawResponse": {},
+        "source": "gemini-hybrid"
+      }
+    },
+    {
+      "id": "msg-1789773782446-sti9t",
+      "timestamp": "2026-09-18T23:23:02.446Z",
+      "conversationId": "conv-1789773782443-k86dq",
+      "role": "user",
+      "content": "hi",
+      "status": "delivered"
+    },
+    {
+      "id": "msg-1789773784639-1wt2n",
+      "timestamp": "2026-09-18T23:23:04.639Z",
+      "conversationId": "conv-1789773782443-k86dq",
+      "role": "assistant",
+      "content": "Hello! How can I help you today?",
+      "status": "delivered",
+      "webhookMeta": {
+        "latencyMs": 434,
+        "statusCode": 200,
+        "urlCalled": "https://cloud.activepieces.com/api/v1/webhooks/XV7ZjjsRNy2BNosAm1HjH/test",
+        "isTestMode": true,
+        "rawResponse": {},
+        "source": "gemini-hybrid"
+      }
+    },
+    {
+      "id": "msg-1789773786904-0fgxk",
+      "timestamp": "2026-09-18T23:23:06.904Z",
+      "conversationId": "conv-1789773782443-k86dq",
+      "role": "user",
+      "content": "What can you do?",
+      "status": "delivered"
+    },
+    {
+      "id": "msg-1789773790927-kv4b1",
+      "timestamp": "2026-09-18T23:23:10.927Z",
+      "conversationId": "conv-1789773782443-k86dq",
+      "role": "assistant",
+      "content": "I am a versatile AI assistant designed to help with a wide variety of tasks. Here is a breakdown of what I can do:\n\n### 1. Writing & Communication\n* **Drafting:** Write emails, essays, reports, cover letters, and blog posts.\n* **Editing:** Proofread text, improve tone, adjust vocabulary, and fix grammar.\n* **Creative Writing:** Generate stories, poetry, scripts, jokes, and dialogue.\n\n### 2. Coding & Technology\n* **Programming:** Write, review, and debug code across many languages (Python, JavaScript, C++, HTML/CSS, SQL, etc.).\n* **Technical Explanations:** Explain complex algorithms, architectures, command-line tools, and technical concepts.\n* **Documentation:** Generate README files, API docs, and code comments.\n\n### 3. Learning & Research\n* **Explanations:** Break down complicated topics (science, history, philosophy, finance) into simple, understandable terms.\n* **Tutoring:** Help solve math problems, practice language learning, or prepare for tests.\n* **Summarization:** Condense long articles, transcripts, or books into key takeaways.\n\n### 4. Organization & Brainstorming\n* **Idea Generation:** Brainstorm business ideas, gift suggestions, marketing angles, or creative projects.\n* **Planning:** Build itineraries, meal plans, workout schedules, or study outlines.\n* **Problem Solving:** Weigh pros and cons to help you make decisions or think through scenarios.\n\n---\n\n**Is there a specific project, question, or problem you’d like to start with?**",
+      "status": "delivered",
+      "webhookMeta": {
+        "latencyMs": 796,
+        "statusCode": 200,
+        "urlCalled": "https://cloud.activepieces.com/api/v1/webhooks/XV7ZjjsRNy2BNosAm1HjH/test",
+        "isTestMode": true,
+        "rawResponse": {},
+        "source": "gemini-hybrid"
+      }
+    },
+    {
+      "id": "msg-1789773851763-ddnxh",
+      "timestamp": "2026-09-18T23:24:11.763Z",
+      "conversationId": "conv-1789773851762-a47z8",
+      "role": "user",
+      "content": "Give me a brief 2-bullet tip on productivity",
+      "status": "delivered"
+    },
+    {
+      "id": "msg-1789773858658-22ar0",
+      "timestamp": "2026-09-18T23:24:18.658Z",
+      "conversationId": "conv-1789773851762-a47z8",
+      "role": "assistant",
+      "content": "Here are two effective tips for boosting productivity:\n\n*   **Eat the Frog:** Tackle your most difficult or important task first thing in the morning before your energy wanes or distractions arise.\n*   **Time Boxing:** Instead of working from an open-ended to-do list, assign specific time blocks on your calendar to individual tasks to prevent procrastination and ensure focus.",
+      "status": "delivered",
+      "webhookMeta": {
+        "latencyMs": 1004,
+        "statusCode": 200,
+        "urlCalled": "https://cloud.activepieces.com/api/v1/webhooks/XV7ZjjsRNy2BNosAm1HjH/test",
+        "isTestMode": true,
+        "rawResponse": {},
+        "source": "gemini-hybrid"
+      }
+    }
+  ]
+}
